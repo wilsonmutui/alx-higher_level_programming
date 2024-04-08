@@ -127,4 +127,3 @@ class Rectangle:
         """Deletes an instance of a class
         """
         print("{:s}".format("Bye rectangle..."))
-

@@ -69,4 +69,3 @@ while queen != N:
             position = 0
     printBoard(chessboard)
     queen += 1
-

@@ -133,4 +133,3 @@ class Rectangle:
         """
         print("{:s}".format("Bye rectangle..."))
         type(self).number_of_instances -= 1
-
