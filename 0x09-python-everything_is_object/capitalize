@@ -1,0 +1,16 @@
+#!/bin/bash
+
+for file in *; do
+    if [[ -f "$file" ]]; then
+        # Extract the first word from the file
+        first_word=$(head -n 1 "$file" | awk '{print $1}')
+        
+        # Capitalize the first letter of the first word
+        capitalized_first_word=$(echo "$first_word" | awk '{print toupper(substr($0, 1, 1)) tolower(substr($0, 2))}')
+        
+        # Replace the first word in the file with the capitalized version
+        sed -i "1s/$first_word/$capitalized_first_word/" "$file"
+        
+        echo "Capitalized first letter of first word in $file"
+    fi
+done
